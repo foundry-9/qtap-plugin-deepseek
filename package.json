@@ -1,0 +1,47 @@
+{
+  "name": "@quilltap/qtap-plugin-deepseek",
+  "version": "1.1.0",
+  "description": "DeepSeek provider integration for Quilltap",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "manifest.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node esbuild.config.mjs && npm run copy-manifest",
+    "copy-manifest": "cp manifest.json dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "quilltap",
+    "quilltap-plugin",
+    "llm",
+    "ai",
+    "provider",
+    "deepseek"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csebold/qtap-plugin-deepseek"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "dependencies": {
+    "@quilltap/plugin-types": "*",
+    "@quilltap/plugin-utils": "*",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0"
+  }
+}

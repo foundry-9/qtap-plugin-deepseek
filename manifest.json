@@ -1,0 +1,56 @@
+{
+  "$schema": "https://quilltap.io/schemas/plugin-manifest.json",
+  "name": "@quilltap/qtap-plugin-deepseek",
+  "title": "DeepSeek",
+  "description": "Integration with DeepSeek for chat completions with thinking/reasoning mode",
+  "version": "1.1.0",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "compatibility": {
+    "quilltapVersion": ">=1.7.0",
+    "nodeVersion": ">=18.0.0"
+  },
+  "capabilities": ["LLM_PROVIDER"],
+  "category": "PROVIDER",
+  "typescript": true,
+  "frontend": "REACT",
+  "styling": "TAILWIND",
+  "enabledByDefault": true,
+  "status": "STABLE",
+  "keywords": ["deepseek", "llm", "chat", "ai", "reasoning"],
+  "providerConfig": {
+    "providerName": "DEEPSEEK",
+    "displayName": "DeepSeek",
+    "description": "Chat completions and reasoning via DeepSeek API",
+    "abbreviation": "DS",
+    "colors": {
+      "bg": "bg-blue-100",
+      "text": "text-blue-800",
+      "icon": "text-blue-600"
+    },
+    "requiresApiKey": true,
+    "requiresBaseUrl": false,
+    "apiKeyLabel": "DeepSeek API Key",
+    "capabilities": {
+      "chat": true,
+      "imageGeneration": false,
+      "embeddings": false,
+      "webSearch": false
+    },
+    "attachmentSupport": {
+      "supported": false,
+      "mimeTypes": [],
+      "description": "DeepSeek does not support file attachments"
+    }
+  },
+  "permissions": {
+    "network": ["api.deepseek.com"],
+    "userData": false,
+    "database": false
+  }
+}
